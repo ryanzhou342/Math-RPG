@@ -1,3 +1,4 @@
+  
 console.log("hello world");
 
 var playerHealth = 1000;
@@ -27,11 +28,11 @@ function generate_equation() {
 	var equation = num1 + "-" + num2;
     } else if (equation_type == "multiply") {
 	var answer = Math.floor(num1 / 10) * Math.floor(num2 / 10);
-	var equation = num1 + "*" + num2;
+	var equation = Math.floor(num1 / 10) + "*" + Math.floor(num2 / 10);
     } else {
 	product = Math.floor(num1 / 10) * Math.floor(num2 / 10);
-	var answer = product / num1;
-	var equation = product + "/" + num1
+	var answer = product / Math.floor(num1 / 10);
+	var equation = product + "/" + Math.floor(num1 / 10);
     }
     
     console.log("num1: " + num1);
